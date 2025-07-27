@@ -1,0 +1,233 @@
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/b3.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    display: flex;
+    align-items: center; 
+}
+
+header i {
+    font-size: 30px;
+    margin-right: 10px; 
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/* Main content */
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    width: 80%;
+    height: auto;
+    color: black;
+    border-radius: 10px;
+    padding: 30px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.wrap h1 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.wrap .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box label {
+    padding: 10px;
+    color: white;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: black;
+    opacity: 0.4;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 58px;
+    transform: translateY(-30%);
+    font-size: 32px;
+}
+
+.wrap .remember {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: -15px 0 15px;
+}
+
+.remember label {
+    color: white;
+    padding: 10px;
+}
+
+.remember label input {
+    accent-color: black;
+    margin-right: 3px;
+}
+
+.remember a {
+    color: white;
+    text-decoration: none;
+}
+
+.remember a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 30px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.register {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.register p {
+    color: white;
+}
+
+.register p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: black;
+    color: #f1e9e9;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.foottext {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social, .contact, .quicklinks, .support {
+    width: 100%; 
+    padding: 20px;
+    
+}
+footer a{
+    text-decoration: none;
+    color:white;
+}
+
+
+
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+    header {
+        top: 10px;
+        right: 40px;
+    }
+
+    .wrap {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header a {
+        font-size: 24px;
+    }
+
+    .wrap {
+        width: 40%;
+    }
+
+    .social, .contact, .quicklinks, .support {
+        width: 25%; 
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    footer {
+        position: relative;
+        bottom: auto;
+    }
+}
+@media (prefers-color-scheme:dark){
+    body{
+        background: url('images/b3m.jpg') no-repeat;
+        background-size: cover;
+    }
+}

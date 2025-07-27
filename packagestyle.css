@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.tc-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 100px; 
+}
+.tourcard {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.tourcard img {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  height: 60%;
+}
+
+.tourcard h3,
+span {
+  padding: 5px;
+}
+.tourcard #duration {
+  float: right;
+}
+
+.tourcard a {
+  text-decoration: none;
+}
+
+.tourcard a:visited {
+  color: black;
+}
+
+.tourcard:hover {
+  box-shadow: 0px 0px 20px 10px #808080;
+}
+
+h2 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .tc-container {
+    text-align: center;
+  }
+}

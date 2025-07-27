@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+    <link rel="stylesheet" href="style1.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script>
+        function log() {
+            event.preventDefault(); 
+            window.alert("Login Success");
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <i class='bx bxs-home'></i>
+            <a href="index.html">Home</a>
+        </div>
+    </header>
+    <main>
+        <div class="wrap" role="form" aria-labelledby="registerTitle">
+            <form method="post" action="" onsubmit="log()">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <label for="email">EMAIL</label><br><br>
+                    <input type="email" id="email" accesskey="e" placeholder="ENTER EMAIL" required>
+                    <i class='bx bxs-user'></i>
+                </div><br>
+
+                <div class="input-box">
+                    <label for="pass">PASSWORD</label><br><br>
+                    <input type="password" id="pass" accesskey="p" placeholder="ENTER PASSWORD" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div><br>
+
+                <div class="remember">
+                    <label><input type="checkbox">Remember me</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="register">
+                    <p>Don't have an account?
+                        <a href="signup.html">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h2>&copy; 2024 Travelling Website</h2><br><br>
+        <div class="foottext">
+            <div class="social">
+                <h3>Social</h3><br>
+                <span><i class='bx bxl-facebook-circle' style="font-size: 35px;color: rgb(10, 54, 199);"></i></span>
+                <span><i class='bx bxl-twitter' style="font-size: 35px;color: rgb(124, 182, 248);"></i></span>
+                <br>
+                <span><i class='bx bxl-instagram-alt' style="font-size: 35px;color: rgb(241, 15, 174);"></i></span>
+                <span><i class='bx bxl-linkedin-square' style="font-size: 35px;color: rgb(86, 130, 243);"></i></span>
+                <br>
+                <span><i class='bx bxl-youtube' style="font-size: 35px;color: rgb(247, 5, 5);"></i></span>
+                <span><i class='bx bxl-pinterest' style="font-size: 35px;color: rgb(177, 2, 2);"></i></span>
+                <br>
+
+
+            </div>
+            <div class="contact">
+                <h3>Contact</h3><br>
+                <span class="fa fa-phone"></span>&nbsp;<span>+91 9887867746</span><br><br>
+                <span class="fa fa-envelope"></span>&nbsp;<span>info@tourme.org</span><br><br>
+                <span class="fab fa-whatsapp-square" style="font-size: 20px;"></span>&nbsp;<span>Get In Touch</span>
+            </div>
+            <div class="quicklinks">
+                <h3>Quick Links</h3><br>
+                <span><a href="index.html">Home</a></span><br><br>
+                <span><a href="packages.html">Domestic Tours</a></span><br><br>
+                <span><a href="packages.html">International Tours</a></span><br><br>
+                <span><a href="">Contact Us</a></span>
+
+            </div>
+            <div class="support">
+                <h3>Support</h3><br>
+                <span><a href="">Frequently Asked Questions</a></span><br><br>
+                <span><a href="">Report a Payment Issue</a></span><br><br>
+                <span><a href="">Terms & Conditions</a></span><br><br>
+                <span><a href="">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+nav {
+    background-color: #3b3a39;
+    backdrop-filter: blur(10px);
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: -20px;
+    width:100vw;
+  }
+  
+.logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-transform: uppercase;
+    padding-left:20px;
+}
+  
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-right: 20px;
+}
+  
+ul li {
+    margin-right: 20px;
+}
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+  
+ul li a:hover {
+    text-decoration: rgb(194, 192, 192) double underline;
+    
+}
+  
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+  
+#menu {
+    display: none;
+}
+@media (max-width: 768px) {
+    .checkbtn {
+      display: block;
+      order: 1;
+      margin-right: 20px;
+}
+ul {
+    position: absolute;
+    top: 18px;
+    right: 100%;
+    background-color: #3b3a39;
+    font-weight: bolder;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    margin: 20px 0;
+}
+
+ul li a {
+    font-size: 20px;
+}
+
+#menu:checked ~ ul {
+    right: 0;
+}
+}
+.shadow{
+    width: 100%;
+    height: 50px;
+    box-shadow: 3px 3px 10px lightslategray;
+}
+
+main {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.contact-section {
+    background-color: #f7f7f7;
+    padding: 2em;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(84, 87, 231, 0.1);
+    border-radius: 15px;
+}
+
+.contact-section h1 {
+    margin-top: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    margin-left: 35%;
+    
+}
+a{
+    text-decoration: none;
+    color: rgb(241, 238, 238);
+}
+.req{
+    color: red;
+}
+
+/* Responsive Design */
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .contact-section {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    main {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .contact-section {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 320px) {
+    main {
+        max-width: 100%;
+        margin: 0;
+    }
+    .contact-section {
+        width: 50%;
+        margin: 0;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        margin-right: 0;
+    }
+    input, textarea {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"]{
+        padding: 3px 5px;
+        width: 50px;
+        font-size: 5px;
+        text-align: center;
+    }
+    
+}
+footer {
+    background-color: #3b3a39;
+    color: #f1e9e9;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.foottext {
+    display: flex;
+    background-color: #3b3a39;
+    color: #f7f7f7;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+
+.social, .contact, .quicklinks, .support {
+    width: 25%; /* Default to full width */
+    padding: 30px;
+    
+}
+.support a,.quicklinks a{
+    text-decoration: none;
+    color: #f7f7f7;
+
+}
+@media screen and (min-width: 992px) {
+    social, .contact, .quicklinks, .support {
+        width: 25%; /* Adjust footer section width for larger screens */
+    }
+}
+@media screen and (min-width: 1200px) {
+    footer {
+        position: relative; /* Adjust positioning for larger screens */
+        bottom: auto; /* Reset to normal flow */
+    }
+}
+@media (max-width:515px){
+    .foottext{
+        flex-wrap: wrap;
+    }
+}

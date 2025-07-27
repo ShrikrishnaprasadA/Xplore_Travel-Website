@@ -1,0 +1,38 @@
+.foottext {
+    background-color: #333;
+    color: #f1e9e9;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .social,
+  .contact,
+  .quicklinks,
+  .support {
+    width: 25%;
+    padding: 30px;
+  }
+  .support a,
+  .quicklinks a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .social a:hover,
+  .contact a:hover,
+  .quicklinks a:hover,
+  .support a:hover{
+     text-decoration: white double underline;
+
+  }
+
+  @media (max-width: 515px) {
+    .foottext {
+      flex-wrap: wrap;
+    }
+  }
+  

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="headerStyles.css">
+    <link rel="stylesheet" href="footerStyles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="menu">
+            <label for="menu" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">&#9992;Xplore</label>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form">
+            <form action="" method="post" onsubmit="log()">
+                <h2>Book Now</h2>
+                <div class="nameInput">
+                    <label for="Name"><span>N</span>ame:</label>
+                    <input type="text" name="fname" id="Name" placeholder="First Name" accesskey="n" class="padding10"
+                        pattern="[[A-Z]{1}[a-z]*]+" required><br><br>
+                    <input type="text" name="lname" id="name" placeholder="Last Name" accesskey="l" class="padding10"
+                        pattern="[[A-Z]{1}[a-z]*{1}]+" required>
+                </div>
+                <div class="phoneInput">
+                    <label for="phone"><span>P</span>hone:</label>
+                    <input type="tel" name="phone" class="padding10" accesskey="p" id="phone" pattern="\d{10}"
+                        placeholder="Enter Phone Number" aria-required="true">
+                </div>
+                <div class="emailInput">
+                    <label for="email">E<span>m</span>ail:</label>
+                    <input type="email" name="email" id="email" class="padding10" accesskey="m"
+                        placeholder="Enter Email" required>
+                </div>
+                <div class="radioInput">
+                    <label class="radio" for="Ptype">Package Type:</label>
+                    <label class="radio" for="International"><input type="radio" name="Ptype" accesskey="e"
+                            id="International" class="International" onchange="toggleDropdowns()"
+                            value="International">Int<span>e</span>rnational</label>
+                    <label class="radio" for="National"><input type="radio" name="Ptype" id="National" accesskey="i"
+                        onchange="toggleDropdowns()" value="National">Nat<span>i</span>onal</label>
+                </div>
+                <div class="selectInput">
+                    <div class="InterP" id="interPackageDropdown">
+                        <label for="Package1"><span>S</span>elect International Package</label>
+                        <select class="InterP" class="padding10" id="Package1" accesskey="s">
+                            <option value="Switzeland">Switzerland</option>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Malaysia">Malaysia</option>
+                        </select>
+                    </div>
+                    <div class="NationalP" id="NationalPackageDropdown">
+                        <label for="Package2"><span>S</span>elect National Package</label>
+                        <select class="NationalP" class="padding10" id="Package2" accesskey="s">
+                            <option value="Kashmir">Kashmir</option>
+                            <option value="Shimla">Shimla</option>
+                            <option value="Andaman">Andaman</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="NoInput">
+                    <label for="No_of_ppl">Numbe<span>r</span> of Travelers</label>
+                    <input type="text" name="No_of_ppl" id="No_of_ppl" pattern="\d+" class="padding10" accesskey="r"
+                        placeholder="Number of People" required>
+                </div>
+                <div class="tavelDateInput">
+                    <label for="TravelDate">Date <span>O</span>f Travel:</label>
+                    <input type="date" name="TravelDate" id="TravelDate" class="dateInput" accesskey="o">
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+            <script>
+                function log() {
+                    event.preventDefault();
+                    window.alert("Booking Success");
+                    window.location.href = "index.html";
+                }
+                
+                function toggleDropdowns() {
+            const internationalRadio = document.getElementById('International');
+            const nationalRadio = document.getElementById('National');
+            const interPackageDropdown = document.querySelector('.InterP');
+            const nationalPackageDropdown = document.querySelector('.NationalP');
+
+            if (internationalRadio.checked) {
+                interPackageDropdown.style.display = 'inline-block';
+                nationalPackageDropdown.style.display = 'none';
+            } else if (nationalRadio.checked) {
+                interPackageDropdown.style.display = 'none';
+                nationalPackageDropdown.style.display = 'inline-block';
+            }
+        }
+            </script>
+        </section>
+    </main>
+    <footer>
+        <h2>&copy; 2024 Travelling Website</h2><br><br>
+        <div class="foottext">
+            <div class="social">
+                <h3>Social</h3><br>
+                <span><i class='bx bxl-facebook-circle' style="font-size: 35px;color: rgb(10, 54, 199);"></i></span>
+                <span><i class='bx bxl-twitter' style="font-size: 35px;color: rgb(124, 182, 248);"></i></span>
+                <br>
+                <span><i class='bx bxl-instagram-alt' style="font-size: 35px;color: rgb(241, 15, 174);"></i></span>
+                <span><i class='bx bxl-linkedin-square' style="font-size: 35px;color: rgb(86, 130, 243);"></i></span>
+                <br>
+                <span><i class='bx bxl-youtube' style="font-size: 35px;color: rgb(247, 5, 5);"></i></span>
+                <span><i class='bx bxl-pinterest' style="font-size: 35px;color: rgb(177, 2, 2);"></i></span>
+                <br>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3><br>
+                <span class="fa fa-phone"></span>&nbsp;<span>+91 9887867746</span><br><br>
+                <span class="fa fa-envelope"></span>&nbsp;<span>info@tourme.org</span><br><br>
+                <span class="fab fa-whatsapp-square" style="font-size: 20px;"></span>&nbsp;<span>Get In Touch</span>
+            </div>
+            <div class="quicklinks">
+                <h3>Quick Links</h3><br>
+                <span><a href="">Home</a></span><br><br>
+                <span><a href="">Domestic Tours</a></span><br><br>
+                <span><a href="">International Tours</a></span><br><br>
+                <span><a href="">Contact Us</a></span>
+
+            </div>
+            <div class="support">
+                <h3>Support</h3><br>
+                <span><a href="">Frequently Asked Questions</a></span><br><br>
+                <span><a href="">Report a Payment Issue</a></span><br><br>
+                <span><a href="">Terms & Conditions</a></span><br><br>
+                <span><a href="">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

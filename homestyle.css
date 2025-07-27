@@ -1,0 +1,62 @@
+h2,
+h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+main {
+  background-image: url("images/travel.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100vw;
+  position: relative;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 300px 0px 50px;
+  
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+#explorebtn {
+  font-weight: bolder;
+  width: 30%;
+  height: 50px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 20px;
+}
+
+#explorebtn:hover {
+  background-color: lightgrey;
+  border-color: green;
+}
+#explorebtn a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 768px) {
+ 
+  .home{
+    text-align: center;
+    box-sizing: border-box;
+    padding: 30px;
+    
+  }
+}
