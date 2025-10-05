@@ -10,84 +10,162 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="vheaderstyle.css">
   <link rel="stylesheet" href="homestyle.css">
-  <link rel="stylesheet" href="vfooter.css" /> 
+  <link rel="stylesheet" href="vfooter.css" />
+  <link rel="stylesheet" href="indexStyle.css" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header>
-      <nav aria-label="Main Navigation">
-          <input type="checkbox" id="menu" aria-label="Toggle navigation menu">
-          <label for="menu" class="checkbtn" aria-hidden="true">
-              <i class="fas fa-bars"></i>
-          </label>
-          <label class="logo" aria-label="Website Logo and Home">&#9992;Xplore</label>
-          <ul role="menu">
-              <li role="menuitem"><a class="active" href="index.html" aria-current="page">Home</a></li>
-              <li role="menuitem"><a href="packages.html" >Packages</a></li>
-              <li role="menuitem"><a href="Gallery.html">Gallery</a></li>
-              <li role="menuitem"><a href="contactus.html">Contact</a></li>
-              <li role="menuitem"><a href="login.html">Login</a></li>
-          </ul>
-      </nav>
+  <!-- Header Section -->
+  <header>
+    <nav aria-label="Main Navigation">
+      <input type="checkbox" id="menu" aria-label="Toggle navigation menu">
+      <label for="menu" class="checkbtn" aria-hidden="true">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo" aria-label="Website Logo and Home">&#9992;Xplore</label>
+      <ul role="menu">
+        <li role="menuitem"><a class="active" href="index.html" aria-current="page">Home</a></li>
+        <li role="menuitem"><a href="packages.html">Packages</a></li>
+        <li role="menuitem"><a href="Gallery.html">Gallery</a></li>
+        <li role="menuitem"><a href="contactus.html">Contact</a></li>
+        <li role="menuitem"><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
   </header>
-  
 
-  <!-- Main Section -->
+
   <main>
     <div class="home" aria-label="Home Section">
       <h2>Best Travels Agency in Udupi</h2>
       <h3>Wanna Travel From Udupi - We are the best Travel Agents in Udupi</h3>
-      <button id="explorebtn" aria-label="Explore Packages Button"><a href="packages.html">Explore Packages!</a></button>
+      <button id="explorebtn" aria-label="Explore Packages Button"><a href="packages.html">Explore
+          Packages!</a></button>
     </div>
+
+    <!-- Featured Packages Section -->
+    <section class="featured-packages" aria-label="Featured Packages">
+      <h2 style="text-align:center; margin-top:40px; color:#1e90ff;">Featured Packages</h2>
+      <div class="packages-list" style="display:flex; flex-wrap:wrap; justify-content:center; gap:32px; margin:30px 0;">
+        <div class="package-card"
+          style="background:#fff; border-radius:18px; box-shadow:0 2px 12px rgba(30,144,255,0.08); width:280px; padding:20px; text-align:center; transition:transform 0.2s;">
+          <img src="https://images.unsplash.com/photo-1465156799763-2c087c332922?auto=format&fit=crop&w=400&q=80"
+            alt="Goa Beach" style="width:100%; border-radius:12px;">
+          <h3 style="color:#1e90ff; margin:16px 0 8px 0;">Goa Beach Escape</h3>
+          <p style="color:#333;">3 Nights / 4 Days<br>Starting at ₹8,999</p>
+          <a href="packages.html"
+            style="display:inline-block; margin-top:12px; color:#fff; background:linear-gradient(90deg,#1e90ff,#00c6ff); padding:8px 24px; border-radius:20px; text-decoration:none; font-weight:600;">View
+            Details</a>
+        </div>
+        <div class="package-card"
+          style="background:#fff; border-radius:18px; box-shadow:0 2px 12px rgba(30,144,255,0.08); width:280px; padding:20px; text-align:center; transition:transform 0.2s;">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80"
+            alt="Manali Adventure" style="width:100%; border-radius:12px;">
+          <h3 style="color:#1e90ff; margin:16px 0 8px 0;">Manali Adventure</h3>
+          <p style="color:#333;">5 Nights / 6 Days<br>Starting at ₹14,499</p>
+          <a href="packages.html"
+            style="display:inline-block; margin-top:12px; color:#fff; background:linear-gradient(90deg,#1e90ff,#00c6ff); padding:8px 24px; border-radius:20px; text-decoration:none; font-weight:600;">View
+            Details</a>
+        </div>
+        <div class="package-card"
+          style="background:#fff; border-radius:18px; box-shadow:0 2px 12px rgba(30,144,255,0.08); width:280px; padding:20px; text-align:center; transition:transform 0.2s;">
+          <img src="https://t4.ftcdn.net/jpg/12/08/38/25/360_F_1208382506_nDaTkoNdGqPOCGuK9IUNrnP73IZX5yhY.jpg"
+            alt="Kerala Backwaters" style="width:100%; border-radius:12px;">
+          <h3 style="color:#1e90ff; margin:16px 0 8px 0;">Kerala Backwaters</h3>
+          <p style="color:#333;">4 Nights / 5 Days<br>Starting at ₹12,999</p>
+          <a href="packages.html"
+            style="display:inline-block; margin-top:12px; color:#fff; background:linear-gradient(90deg,#1e90ff,#00c6ff); padding:8px 24px; border-radius:20px; text-decoration:none; font-weight:600;">View
+            Details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" aria-label="Customer Testimonials" style="background:#f7fafd; padding:40px 0;">
+      <h2 style="text-align:center; color:#1e90ff;">What Our Customers Say</h2>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:32px; margin-top:30px;">
+        <div
+          style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(30,144,255,0.08); padding:24px; max-width:320px;">
+          <p style="font-style:italic; color:#333;">"Amazing service! The Goa trip was perfectly organized and
+            hassle-free. Highly recommended."</p>
+          <div style="margin-top:12px; display:flex; align-items:center;">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer"
+              style="width:48px; height:48px; border-radius:50%; margin-right:12px;">
+            <span style="font-weight:600; color:#1e90ff;">Priya S.</span>
+          </div>
+        </div>
+        <div
+          style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(30,144,255,0.08); padding:24px; max-width:320px;">
+          <p style="font-style:italic; color:#333;">"Our Manali adventure was unforgettable. Great support and friendly
+            staff!"</p>
+          <div style="margin-top:12px; display:flex; align-items:center;">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer"
+              style="width:48px; height:48px; border-radius:50%; margin-right:12px;">
+            <span style="font-weight:600; color:#1e90ff;">Rahul K.</span>
+          </div>
+        </div>
+        <div
+          style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(30,144,255,0.08); padding:24px; max-width:320px;">
+          <p style="font-style:italic; color:#333;">"Kerala Backwaters package was a dream come true. Will book again!"
+          </p>
+          <div style="margin-top:12px; display:flex; align-items:center;">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer"
+              style="width:48px; height:48px; border-radius:50%; margin-right:12px;">
+            <span style="font-weight:600; color:#1e90ff;">Anjali M.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ...existing code... -->
   </main>
 
   <!-- Footer Section -->
   <footer aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer Section</h2>
     <div class="foottext">
-      <!-- Social Section -->
       <div class="social">
-        <h3>Social</h3><br>
-        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle" style="font-size: 35px;color: rgb(10, 54, 199);" aria-hidden="true"></i></a>
-        <a href="#" aria-label="Twitter"><i class="bx bxl-twitter" style="font-size: 35px;color: rgb(124, 182, 248);" aria-hidden="true"></i></a>
-        <br>
-        <a href="#" aria-label="Instagram"><i class="bx bxl-instagram-alt" style="font-size: 35px;color: rgb(241, 15, 174);" aria-hidden="true"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="bx bxl-linkedin-square" style="font-size: 35px;color: rgb(86, 130, 243);" aria-hidden="true"></i></a>
-        <br>
-        <a href="#" aria-label="YouTube"><i class="bx bxl-youtube" style="font-size: 35px;color: rgb(247, 5, 5);" aria-hidden="true"></i></a>
-        <a href="#" aria-label="Pinterest"><i class="bx bxl-pinterest" style="font-size: 35px;color: rgb(177, 2, 2);" aria-hidden="true"></i></a>
+        <h3>Social</h3>
+        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle" style="font-size: 35px; color: #0a36c7;"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bx bxl-twitter" style="font-size: 35px; color: #7cb6f8;"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bx bxl-instagram-alt" style="font-size: 35px; color: #f10fae;"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bx bxl-linkedin-square" style="font-size: 35px; color: #5682f3;"></i></a>
+        <a href="#" aria-label="YouTube"><i class="bx bxl-youtube" style="font-size: 35px; color: #f70505;"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="bx bxl-pinterest" style="font-size: 35px; color: #b10202;"></i></a>
       </div>
-
-      <!-- Contact Section -->
       <div class="contact">
-        <h3>Contact</h3><br>
-        <span class="fa fa-phone" aria-hidden="true"></span>&nbsp;<span>+91 9887867746</span><br><br>
-        <span class="fa fa-envelope" aria-hidden="true"></span>&nbsp;<span>info@xplore.org</span><br><br>
-        <span class="fab fa-whatsapp-square" style="font-size: 20px;" aria-hidden="true"></span>&nbsp;<span>Get In Touch</span>
+        <h3>Contact</h3>
+        <span class="fa fa-phone"></span>&nbsp;<span>+91 9887867746</span><br>
+        <span class="fa fa-envelope"></span>&nbsp;<span>info@xplore.org</span><br>
+        <span class="fab fa-whatsapp-square" style="font-size: 20px;"></span>&nbsp;<span>Get In Touch</span>
       </div>
-
-      <!-- Quick Links -->
       <div class="quicklinks">
-        <h3>Quick Links</h3><br>
-        <a href="#" aria-label="Home Link">Home</a><br><br>
-        <a href="#" aria-label="Domestic Tours">Domestic Tours</a><br><br>
-        <a href="#" aria-label="International Tours">International Tours</a><br><br>
-        <a href="#" aria-label="Contact Us">Contact Us</a>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a><br>
+        <a href="packages.html">Domestic Tours</a><br>
+        <a href="Gallery.html">International Tours</a><br>
+        <a href="contactus.html">Contact Us</a>
       </div>
-
-      <!-- Support Section -->
       <div class="support">
-        <h3>Support</h3><br>
-        <a href="#" aria-label="Frequently Asked Questions">Frequently Asked Questions</a><br><br>
-        <a href="#" aria-label="Report a Payment Issue">Report a Payment Issue</a><br><br>
-        <a href="#" aria-label="Terms and Conditions">Terms & Conditions</a><br><br>
-        <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+        <h3>Support</h3>
+        <a href="#">Frequently Asked Questions</a><br>
+        <a href="#">Report a Payment Issue</a><br>
+        <a href="#">Terms & Conditions</a><br>
+        <a href="#">Privacy Policy</a>
       </div>
     </div>
   </footer>
+  <script>
+    // Example: Animate explore button on page load
+    window.onload = function () {
+      document.getElementById('explorebtn').style.transform = 'scale(1.1)';
+      setTimeout(() => {
+        document.getElementById('explorebtn').style.transform = 'scale(1)';
+      }, 600);
+    };
+  </script>
 </body>
 
 </html>

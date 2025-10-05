@@ -7,50 +7,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTER</title>
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="vfooter.css">
+    <link rel="stylesheet" href="vheaderstyle.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
+<body class="signup-page">
+    <header>
+        <nav aria-label="Main Navigation">
+            <input type="checkbox" id="menu" aria-label="Toggle navigation menu">
+            <label for="menu" class="checkbtn" aria-hidden="true">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo" aria-label="Website Logo and Home">&#9992;Xplore</label>
+            <ul role="menu">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <div class="box" role="form" aria-labelledby="registerTitle">
-            <form method="post" action="abc.html" onsubmit="return validateForm(event)">
+        <div class="box">
+            <!-- ✅ Removed JS redirect, let PHP handle -->
+            <form method="post" action="signup.php">
                 <h1 id="registerTitle">REGISTER</h1><br>
                 <p id="reg">Kindly fill in this form to register</p>
-                
+
                 <div class="input-box">
                     <label for="user">USERNAME</label><br>
-                    <input type="text" id="user" placeholder="ENTER USERNAME" accesskey="u" required aria-required="true" aria-describedby="usernameHelp">
+                    <input type="text" name="user" id="user" placeholder="ENTER USERNAME" required>
                     <i class='bx bxs-user'></i>
                 </div><br>
-                
+
                 <div class="input-box">
                     <label for="email">EMAIL</label><br>
-                    <input type="email" id="email" placeholder="ENTER EMAIL" accesskey="e" required aria-required="true" aria-describedby="emailHelp">
+                    <input type="email" name="email" id="email" placeholder="ENTER EMAIL" required>
                     <i class='bx bxs-envelope'></i>
                 </div><br>
-                
+
                 <div class="input-box">
                     <label for="num">PHONE NUMBER</label><br>
-                    <input type="tel" id="num" pattern="\d{10}" placeholder="ENTER PHONE NUMBER" accesskey="n" required aria-required="true" aria-describedby="phoneHelp">
+                    <input type="tel" name="num" id="num" pattern="\d{10}" placeholder="ENTER PHONE NUMBER" required>
                     <i class='bx bxs-phone'></i>
                 </div><br>
-                
+
                 <div class="input-box">
                     <label for="pass">PASSWORD</label><br>
-                    <input type="password" id="pass" placeholder="ENTER PASSWORD" accesskey="p" required aria-required="true" aria-describedby="passwordHelp">
-                    <span class="error" id="passwordError"></span>
+                    <input type="password" name="pass" id="pass" placeholder="ENTER PASSWORD" required>
                     <i class='bx bxs-lock-alt'></i>
                 </div><br>
-                
+
                 <div class="input-box">
                     <label for="cpass">CONFIRM PASSWORD</label><br>
-                    <input type="password" id="cpass" placeholder="CONFIRM YOUR PASSWORD" required aria-required="true" aria-describedby="confirmPasswordHelp"><br><br>
-                    <span class="error" id="confirmPasswordError"></span>
+                    <input type="password" name="cpass" id="cpass" placeholder="CONFIRM YOUR PASSWORD" required>
                     <i class='bx bxs-lock'></i>
                 </div><br>
-                
+
                 <button type="submit" class="btn">Register</button>
-                
+
                 <div class="login">
                     <p>Already have an account?
                         <a href="login.html">Log in</a>
@@ -59,55 +76,24 @@
             </form>
         </div>
     </main>
-    <script>
-        function validateConfirmPassword() {
-            const confirmPassword = document.getElementById('cpass').value;
-            const password = document.getElementById('pass').value;
-            const errorElement = document.getElementById('confirmPasswordError');
-            const inputElement = document.getElementById('cpass');
 
-            if (confirmPassword !== password) {
-                errorElement.textContent = 'Passwords do not match.';
-                inputElement.classList.add('invalid');
-                return false;
-            }
-            errorElement.textContent = '';
-            inputElement.classList.remove('invalid');
-            return true;
-        }
-
-        function validateForm(event) {
-            event.preventDefault();
-            const isPasswordValid = validateConfirmPassword();
-            if (!isPasswordValid) {
-                return false; 
-            }
-
-            alert("Registered Successfully");
-            window.location.href = "login.html";
-            return true;
-        }
-    </script>
     <footer>
         <h2>&copy; 2024 Travelling Website</h2><br><br>
         <div class="foottext">
             <div class="social">
                 <h3>Social</h3><br>
-                <span><i class='bx bxl-facebook-circle' style="font-size: 35px;color: rgb(10, 54, 199);"></i></span>
-                <span><i class='bx bxl-twitter' style="font-size: 35px;color: rgb(124, 182, 248);"></i></span>
-                <br>
-                <span><i class='bx bxl-instagram-alt' style="font-size: 35px;color: rgb(241, 15, 174);"></i></span>
-                <span><i class='bx bxl-linkedin-square' style="font-size: 35px;color: rgb(86, 130, 243);"></i></span>
-                <br>
-                <span><i class='bx bxl-youtube' style="font-size: 35px;color: rgb(247, 5, 5);"></i></span>
-                <span><i class='bx bxl-pinterest' style="font-size: 35px;color: rgb(177, 2, 2);"></i></span>
-                <br>
+                <span><i class='bx bxl-facebook-circle'></i></span>
+                <span><i class='bx bxl-twitter'></i></span><br>
+                <span><i class='bx bxl-instagram-alt'></i></span>
+                <span><i class='bx bxl-linkedin-square'></i></span><br>
+                <span><i class='bx bxl-youtube'></i></span>
+                <span><i class='bx bxl-pinterest'></i></span><br>
             </div>
             <div class="contact">
                 <h3>Contact</h3><br>
-                <span></span><span>+91 9887867746</span><br><br>
-                <span></span><span>info@tourme.org</span><br><br>
-                <span></span><span>Get In Touch</span>
+                <span>+91 9887867746</span><br><br>
+                <span>info@tourme.org</span><br><br>
+                <span>Get In Touch</span>
             </div>
             <div class="quicklinks">
                 <h3>Quick Links</h3><br>
@@ -118,7 +104,7 @@
             </div>
             <div class="support">
                 <h3>Support</h3><br>
-                <span><a href="">Frequently Asked Questions</a></span><br><br>
+                <span><a href="">FAQs</a></span><br><br>
                 <span><a href="">Report a Payment Issue</a></span><br><br>
                 <span><a href="">Terms & Conditions</a></span><br><br>
                 <span><a href="">Privacy Policy</a></span>
@@ -126,5 +112,4 @@
         </div>
     </footer>
 </body>
-
 </html>

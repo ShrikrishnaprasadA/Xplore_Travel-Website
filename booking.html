@@ -7,12 +7,12 @@
     <title>Booking</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="booking.css">
-    <link rel="stylesheet" href="headerStyles.css">
-    <link rel="stylesheet" href="footerStyles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="vheaderstyle.css">
+    <link rel="stylesheet" href="vfooter.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
 </head>
 
-<body>
+<body class="booking-page">
     <header>
         <nav>
             <input type="checkbox" id="menu">
@@ -20,18 +20,18 @@
                 <i class="fas fa-bars"></i>
             </label>
             <label class="logo">&#9992;Xplore</label>
-            <ul>
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="packages.html">Packages</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="contactus.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
+            <ul role="menu">
+                <li role="menuitem"><a class="active" href="index.html" aria-current="page">Home</a></li>
+                <li role="menuitem"><a href="packages.html">Packages</a></li>
+                <li role="menuitem"><a href="Gallery.html">Gallery</a></li>
+                <li role="menuitem"><a href="contactus.html">Contact</a></li>
+                <li role="menuitem"><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="form">
-            <form action="" method="post" onsubmit="log()">
+            <form action="booking.php" method="post">
                 <h2>Book Now</h2>
                 <div class="nameInput">
                     <label for="Name"><span>N</span>ame:</label>
@@ -56,12 +56,13 @@
                             id="International" class="International" onchange="toggleDropdowns()"
                             value="International">Int<span>e</span>rnational</label>
                     <label class="radio" for="National"><input type="radio" name="Ptype" id="National" accesskey="i"
-                        onchange="toggleDropdowns()" value="National">Nat<span>i</span>onal</label>
+                            onchange="toggleDropdowns()" value="National">Nat<span>i</span>onal</label>
                 </div>
                 <div class="selectInput">
+                    
                     <div class="InterP" id="interPackageDropdown">
                         <label for="Package1"><span>S</span>elect International Package</label>
-                        <select class="InterP" class="padding10" id="Package1" accesskey="s">
+                        <select name="Package1" class="InterP" class="padding10" id="Package1" accesskey="s">
                             <option value="Switzeland">Switzerland</option>
                             <option value="Dubai">Dubai</option>
                             <option value="Bali">Bali</option>
@@ -70,7 +71,7 @@
                     </div>
                     <div class="NationalP" id="NationalPackageDropdown">
                         <label for="Package2"><span>S</span>elect National Package</label>
-                        <select class="NationalP" class="padding10" id="Package2" accesskey="s">
+                        <select name="Package2" class="NationalP" class="padding10" id="Package2" accesskey="s">
                             <option value="Kashmir">Kashmir</option>
                             <option value="Shimla">Shimla</option>
                             <option value="Andaman">Andaman</option>
@@ -92,67 +93,65 @@
                 </div>
             </form>
             <script>
-                function log() {
-                    event.preventDefault();
-                    window.alert("Booking Success");
-                    window.location.href = "index.html";
-                }
-                
                 function toggleDropdowns() {
-            const internationalRadio = document.getElementById('International');
-            const nationalRadio = document.getElementById('National');
-            const interPackageDropdown = document.querySelector('.InterP');
-            const nationalPackageDropdown = document.querySelector('.NationalP');
+                    const internationalRadio = document.getElementById('International');
+                    const nationalRadio = document.getElementById('National');
+                    const interPackageDropdown = document.querySelector('.InterP');
+                    const nationalPackageDropdown = document.querySelector('.NationalP');
 
-            if (internationalRadio.checked) {
-                interPackageDropdown.style.display = 'inline-block';
-                nationalPackageDropdown.style.display = 'none';
-            } else if (nationalRadio.checked) {
-                interPackageDropdown.style.display = 'none';
-                nationalPackageDropdown.style.display = 'inline-block';
-            }
-        }
+                    if (internationalRadio.checked) {
+                        interPackageDropdown.style.display = 'inline-block';
+                        nationalPackageDropdown.style.display = 'none';
+                    } else if (nationalRadio.checked) {
+                        interPackageDropdown.style.display = 'none';
+                        nationalPackageDropdown.style.display = 'inline-block';
+                    }
+                }
             </script>
         </section>
     </main>
-    <footer>
-        <h2>&copy; 2024 Travelling Website</h2><br><br>
+    <!-- Footer Section -->
+    <footer aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer Section</h2>
         <div class="foottext">
             <div class="social">
-                <h3>Social</h3><br>
-                <span><i class='bx bxl-facebook-circle' style="font-size: 35px;color: rgb(10, 54, 199);"></i></span>
-                <span><i class='bx bxl-twitter' style="font-size: 35px;color: rgb(124, 182, 248);"></i></span>
-                <br>
-                <span><i class='bx bxl-instagram-alt' style="font-size: 35px;color: rgb(241, 15, 174);"></i></span>
-                <span><i class='bx bxl-linkedin-square' style="font-size: 35px;color: rgb(86, 130, 243);"></i></span>
-                <br>
-                <span><i class='bx bxl-youtube' style="font-size: 35px;color: rgb(247, 5, 5);"></i></span>
-                <span><i class='bx bxl-pinterest' style="font-size: 35px;color: rgb(177, 2, 2);"></i></span>
-                <br>
+                <h3>Social</h3>
+                <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle"
+                        style="font-size: 35px; color: #0a36c7;"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"
+                        style="font-size: 35px; color: #7cb6f8;"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bx bxl-instagram-alt"
+                        style="font-size: 35px; color: #f10fae;"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="bx bxl-linkedin-square"
+                        style="font-size: 35px; color: #5682f3;"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bx bxl-youtube"
+                        style="font-size: 35px; color: #f70505;"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="bx bxl-pinterest"
+                        style="font-size: 35px; color: #b10202;"></i></a>
             </div>
             <div class="contact">
-                <h3>Contact</h3><br>
-                <span class="fa fa-phone"></span>&nbsp;<span>+91 9887867746</span><br><br>
-                <span class="fa fa-envelope"></span>&nbsp;<span>info@tourme.org</span><br><br>
+                <h3>Contact</h3>
+                <span class="fa fa-phone"></span>&nbsp;<span>+91 9887867746</span><br>
+                <span class="fa fa-envelope"></span>&nbsp;<span>info@xplore.org</span><br>
                 <span class="fab fa-whatsapp-square" style="font-size: 20px;"></span>&nbsp;<span>Get In Touch</span>
             </div>
             <div class="quicklinks">
-                <h3>Quick Links</h3><br>
-                <span><a href="">Home</a></span><br><br>
-                <span><a href="">Domestic Tours</a></span><br><br>
-                <span><a href="">International Tours</a></span><br><br>
-                <span><a href="">Contact Us</a></span>
-
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a><br>
+                <a href="packages.html">Domestic Tours</a><br>
+                <a href="Gallery.html">International Tours</a><br>
+                <a href="contactus.html">Contact Us</a>
             </div>
             <div class="support">
-                <h3>Support</h3><br>
-                <span><a href="">Frequently Asked Questions</a></span><br><br>
-                <span><a href="">Report a Payment Issue</a></span><br><br>
-                <span><a href="">Terms & Conditions</a></span><br><br>
-                <span><a href="">Privacy Policy</a></span>
+                <h3>Support</h3>
+                <a href="#">Frequently Asked Questions</a><br>
+                <a href="#">Report a Payment Issue</a><br>
+                <a href="#">Terms & Conditions</a><br>
+                <a href="#">Privacy Policy</a>
             </div>
         </div>
     </footer>
 </body>
 
 </html>
+

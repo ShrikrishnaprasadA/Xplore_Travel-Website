@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manali Travel Packages</title>
+  <link rel="stylesheet" href="vheaderstyle.css">
+  <link rel="stylesheet" href="vfooter.css">
+  <link rel="stylesheet" href="package-common.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    .hero-manali {
+      background: linear-gradient(rgba(30,144,255,0.7),rgba(0,198,255,0.7)), url('images/manali.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px 40px 20px;
+      border-radius: 0 0 30px 30px;
+      margin-bottom: 30px;
+      animation: fadeIn 1.2s;
+    }
+    .hero-manali h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px #222;
+    }
+    .hero-manali p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 6px #222;
+    }
+    .destination {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(30,144,255,0.10);
+      padding: 40px 32px 32px 32px;
+      animation: fadeIn 1.2s;
+    }
+    .destination h1 {
+      color: #1e90ff;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      text-align: center;
+      font-family: cursive;
+    }
+    .destination .tour-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .destination .tour-info p {
+      background: #f7fafd;
+      border-radius: 12px;
+      padding: 10px 18px;
+      margin: 0;
+      font-size: 1.05rem;
+      color: #333;
+      min-width: 180px;
+      box-shadow: 0 2px 8px rgba(30,144,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .destination h2 {
+      color: #1e90ff;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .destination ol {
+      margin-left: 24px;
+      margin-bottom: 24px;
+      color: #333;
+      font-size: 1rem;
+    }
+    .destination ol li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .book-now {
+      display: inline-block;
+      margin-top: 24px;
+      background: linear-gradient(90deg,#1e90ff,#00c6ff);
+      color: #fff;
+      padding: 14px 38px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 16px rgba(30,144,255,0.12);
+      transition: background 0.2s, transform 0.2s;
+      font-family: cursive;
+      letter-spacing: 1px;
+    }
+    .book-now:hover {
+      background: linear-gradient(90deg,#00c6ff,#1e90ff);
+      transform: scale(1.07);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 700px) {
+      .hero-manali {
+        padding: 40px 8px 24px 8px;
+      }
+      .destination {
+        padding: 18px 6px 18px 6px;
+      }
+      .destination .tour-info {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <input type="checkbox" id="menu">
+      <label for="menu" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">&#9992;Xplore</label>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-manali">
+    <h1>Manali</h1>
+    <p>Adventure and serenity in the Himalayas: snow-capped peaks, rivers, and unforgettable memories.</p>
+    <span style="font-size:1.2rem;">
+      <i class="fa fa-star" style="color: rgb(231, 195, 20);"></i> 4.5 (8 Reviews)
+    </span>
+  </section>
+
+  <main>
+    <section class="destination">
+      <h1>Manali</h1>
+      <div class="tour-info">
+        <p><i class="far fa-clock"></i><b>Duration:</b> 6 Nights 7 Days</p>
+        <p><i class="fas fa-shoe-prints"></i><b>Tour Type:</b> Daily Tour</p>
+        <p><i class="fa fa-user"></i><b>Group Size:</b> 80 people</p>
+        <p><i class="fa fa-language"></i><b>Languages:</b> English, Hindi</p>
+      </div>
+      <h2>About this tour</h2>
+      <p>Manali, nestled in the heart of the Himalayas, is a haven for adventure seekers and nature lovers. From snow-capped peaks and lush valleys to vibrant markets and ancient temples, Manali offers a perfect blend of excitement and tranquility.</p>
+      <h2>Included/Excluded</h2>
+      <ol>
+        <li>&#9989; Pick-up and drop-off from Chandigarh/Delhi Airport.</li>
+        <li>&#9989; 3-star accommodation with breakfast and dinner.</li>
+        <li>&#9989; Guided sightseeing tours as per itinerary.</li>
+        <li>&#9989; All transfers and local transport.</li>
+        <li>&#10060; Flight/Train Charges</li>
+        <li>&#10060; Personal expenses</li>
+      </ol>
+      <h2>Itinerary</h2>
+      <ol>
+        <li>
+          <h3>Day 1 - Arrival in Manali</h3>
+          <p>Arrive at Manali and transfer to your hotel. Rest and acclimatize to the altitude. Evening free for leisure.</p>
+        </li>
+        <li>
+          <h3>Day 2 - Manali Local Sightseeing</h3>
+          <p>Visit Hadimba Temple, Manu Temple, Vashisht Hot Springs, and explore the Mall Road.</p>
+        </li>
+        <li>
+          <h3>Day 3 - Solang Valley Adventure</h3>
+          <p>Enjoy adventure activities like paragliding, zorbing, and ropeway in Solang Valley.</p>
+        </li>
+        <li>
+          <h3>Day 4 - Rohtang Pass Excursion</h3>
+          <p>Drive to Rohtang Pass (subject to permit and weather). Enjoy snow activities and breathtaking views.</p>
+        </li>
+        <li>
+          <h3>Day 5 - Naggar Castle & Art Gallery</h3>
+          <p>Visit Naggar Castle, Nicholas Roerich Art Gallery, and enjoy riverside walks.</p>
+        </li>
+        <li>
+          <h3>Day 6 - Kullu & Manikaran</h3>
+          <p>Excursion to Kullu Valley and Manikaran Sahib. Enjoy river rafting and visit local temples.</p>
+        </li>
+        <li>
+          <h3>Day 7 - Departure</h3>
+          <p>Check out from hotel and transfer to airport/railway station for onward journey.</p>
+        </li>
+      </ol>
+      <a href="booking.html" class="book-now">Book Now</a>
+    </section>
+  </main>
+
+  <!-- Use this in all your pages' <footer> -->
+  <footer aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer Section</h2>
+    <div class="foottext">
+      <div class="social">
+        <h3>Social</h3>
+        <a href="#" aria-label="Facebook"><i class="bx bxl-facebook-circle" style="font-size: 35px; color: #0a36c7;"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bx bxl-twitter" style="font-size: 35px; color: #7cb6f8;"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bx bxl-instagram-alt" style="font-size: 35px; color: #f10fae;"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bx bxl-linkedin-square" style="font-size: 35px; color: #5682f3;"></i></a>
+        <a href="#" aria-label="YouTube"><i class="bx bxl-youtube" style="font-size: 35px; color: #f70505;"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="bx bxl-pinterest" style="font-size: 35px; color: #b10202;"></i></a>
+      </div>
+      <div class="contact">
+        <h3>Contact</h3>
+        <span class="fa fa-phone"></span>&nbsp;<span>+91 9887867746</span><br>
+        <span class="fa fa-envelope"></span>&nbsp;<span>info@xplore.org</span><br>
+        <span class="fab fa-whatsapp-square" style="font-size: 20px;"></span>&nbsp;<span>Get In Touch</span>
+      </div>
+      <div class="quicklinks">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a><br>
+        <a href="packages.html">Domestic Tours</a><br>
+        <a href="Gallery.html">International Tours</a><br>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+      <div class="support">
+        <h3>Support</h3>
+        <a href="#">Frequently Asked Questions</a><br>
+        <a href="#">Report a Payment Issue</a><br>
+        <a href="#">Terms & Conditions</a><br>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

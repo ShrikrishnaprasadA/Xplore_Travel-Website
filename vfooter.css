@@ -1,38 +1,85 @@
 .foottext {
-    background-color: #333;
-    color: #f1e9e9;
-    padding: 1em;
-    text-align: center;
+    background: linear-gradient(90deg, #1e90ff 0%, #00c6ff 100%);
+    color: #fff;
+    padding: 40px 10px 20px 10px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
     box-sizing: border-box;
-  }
-  
-  .social,
-  .contact,
-  .quicklinks,
-  .support {
-    width: 25%;
-    padding: 30px;
-  }
-  .support a,
-  .quicklinks a {
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 -2px 16px rgba(30,144,255,0.08);
+    flex-wrap: wrap;
+    animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.social,
+.contact,
+.quicklinks,
+.support {
+    min-width: 180px;
+    max-width: 260px;
+    flex: 1 1 220px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.foottext h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.foottext a {
     text-decoration: none;
-    color: white;
-  }
+    color: #f1e9e9;
+    font-size: 1rem;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+    margin-bottom: 8px;
+}
 
-  .social a:hover,
-  .contact a:hover,
-  .quicklinks a:hover,
-  .support a:hover{
-     text-decoration: white double underline;
+.foottext a:hover {
+    color: #ffe066;
+    transform: scale(1.08);
+    text-decoration: underline wavy #ffe066 2px;
+}
 
-  }
+.social i {
+    margin-right: 8px;
+    transition: filter 0.2s, transform 0.2s;
+}
 
-  @media (max-width: 515px) {
+.social i:hover {
+    filter: brightness(1.3);
+    transform: scale(1.2);
+}
+
+.contact span {
+    font-size: 1rem;
+    color: #ffe066;
+}
+
+@media (max-width: 900px) {
     .foottext {
-      flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 5px 10px 5px;
     }
-  }
-  
+    .social,
+    .contact,
+    .quicklinks,
+    .support {
+        width: 90%;
+        max-width: 400px;
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+}

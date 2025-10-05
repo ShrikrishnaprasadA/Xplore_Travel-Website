@@ -1,3 +1,4 @@
+/* Reset & Base */
 * {
     margin: 0;  
     padding: 0;
@@ -5,34 +6,18 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
+/* Apply only on login page */
+body.login-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('images/b3.jpg') no-repeat center center fixed;
-    background-size: cover;
+   background: linear-gradient(rgb(137, 142, 143),#cae7ffb3) /* Gradient */
+   
+    /* If you want solid: background-color: #2c3e50; */
 }
 
-header {
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    display: flex;
-    align-items: center; 
-}
-
-header i {
-    font-size: 30px;
-    margin-right: 10px; 
-}
-
-header a {
-    color: black;
-    text-decoration: none;
-    font-size: 30px;
-}
 
 /* Main content */
 main {
@@ -45,13 +30,13 @@ main {
 
 .wrap {
     width: 80%;
-    height: auto;
+    max-width: 400px;
     color: black;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 30px;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);   /* Transparent form background */
     border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
 
@@ -61,6 +46,7 @@ main {
     color: white;
 }
 
+/* Input fields */
 .wrap .input-box {
     position: relative;
     width: 100%;
@@ -71,6 +57,7 @@ main {
 .input-box label {
     padding: 10px;
     color: white;
+    font-weight: 500;
 }
 
 .input-box input {
@@ -79,64 +66,61 @@ main {
     border: none;
     outline: none;
     border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
+    border-radius: 20px;
     font-size: 16px;
     color: black;
-    padding: 20px 45px 20px 20px;
+    padding: 15px 45px 15px 15px;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .input-box input::placeholder {
     color: black;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .input-box i {
     position: absolute;
-    right: 20px;
-    top: 58px;
-    transform: translateY(-30%);
-    font-size: 32px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: gray;
 }
 
+/* Remember me */
 .wrap .remember {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    margin: -15px 0 15px;
+    margin: -10px 0 15px;
 }
 
 .remember label {
     color: white;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .remember label input {
     accent-color: black;
-    margin-right: 3px;
 }
 
-.remember a {
-    color: white;
-    text-decoration: none;
-}
-
-.remember a:hover {
-    text-decoration: underline;
-}
-
+/* Button */
 .btn {
     width: 100%;
-    height: 30px;
+    height: 40px;
     background: white;
     border: none;
     outline: none;
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 16px;
     color: black;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -144,6 +128,7 @@ main {
     color: white;
 }
 
+/* Register section */
 .register {
     text-align: center;
     margin-top: 20px;
@@ -164,6 +149,7 @@ main {
     text-decoration: underline;
 }
 
+/* Footer */
 footer {
     background-color: black;
     color: #f1e9e9;
@@ -183,51 +169,43 @@ footer {
 .social, .contact, .quicklinks, .support {
     width: 100%; 
     padding: 20px;
-    
 }
-footer a{
+
+footer a {
+    color: #1e90ff;
     text-decoration: none;
-    color:white;
+    font-weight: 500;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: #00c6ff;
 }
 
-
-
-
-/* Media Queries */
-@media screen and (min-width: 600px) {
-    header {
-        top: 10px;
-        right: 40px;
-    }
-
-    .wrap {
-        width: 50%;
-    }
+.foottext > div {
+    margin-bottom: 16px;
 }
 
 @media screen and (min-width: 992px) {
-    header a {
-        font-size: 24px;
+    .foottext > div {
+        margin-bottom: 0;
     }
-
-    .wrap {
-        width: 40%;
+    .foottext {
+        display: flex;
+        justify-content: space-between;
     }
-
     .social, .contact, .quicklinks, .support {
         width: 25%; 
     }
 }
 
-@media screen and (min-width: 1200px) {
-    footer {
-        position: relative;
-        bottom: auto;
+/* Responsive for login form */
+@media screen and (max-width: 400px) {
+    .wrap {
+        width: 90%;
+        padding: 20px;
     }
-}
-@media (prefers-color-scheme:dark){
-    body{
-        background: url('images/b3m.jpg') no-repeat;
-        background-size: cover;
+    .input-box input {
+        font-size: 14px;
+        padding: 12px 40px 12px 12px;
     }
 }

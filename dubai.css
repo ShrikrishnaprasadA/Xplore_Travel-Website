@@ -1,246 +1,108 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-nav {
-  background-color: #3b3a39;
-  backdrop-filter: blur(10px);
-  font-weight: bolder;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: -20px;
-  width:100vw;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bolder;
-  text-decoration: underline;
-  text-transform: uppercase;
-  padding-left:20px;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin-right: 20px;
-}
-
-ul li {
-  margin-right: 20px;
-}
-ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-ul li a:hover {
-  text-decoration: white double underline;
-  
-}
-
-.checkbtn {
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  display: none;
-}
-
-#menu {
-  display: none;
-}
-@media (max-width: 768px) {
-  .checkbtn {
-    display: block;
-    order: 1;
-    margin-right: 20px;
-}
-ul {
-  position: absolute;
-  top: 18px;
-  right: 100%;
-  background-color: #3b3a39;
-  font-weight: bolder;
-  width: 50%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-ul li {
-  margin: 20px 0;
-}
-
-ul li a {
-  font-size: 20px;
-}
-
-#menu:checked ~ ul {
-  right: 0;
-}
-}
-.shadow{
-  width: 100%;
-  height: 50px;
-  box-shadow: 3px 3px 10px lightslategray;
-}
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .destination {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .destination h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .destination p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  .tour-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .tour-info p {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  
-  .itinerary {
-    margin-top: 20px;
-  }
-  
-  .itinerary ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .itinerary li {
-    margin-bottom: 10px;
-  }
-  .itinerary h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .itinerary p {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  .book-now {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    margin: 10px 20px;
-}
-.slider{
-  width: 55%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap:auto;
-  /* justify-content: center;
-  flex-direction: column;
-  align-items: center; */
-  /* opacity: 1.0; */
-}
-.slider img{
-  width: 100%;
-  height: auto;
-  border-radius: 30px;
-  margin:10%
-}
-a{
-  text-decoration: none;
-  color: rgb(241, 238, 238);
-}
-
-footer {
-  background-color: #3b3a39;
-  color: #f1e9e9;
-  padding: 1em;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.foottext {
-  display: flex;
-  background-color: #3b3a39;
-  color: #f7f7f7;
-  padding: 1em;
-  text-align: center;
-  width: 100%;
-  justify-content: center;
-  box-sizing: border-box;
-
-}
-.social, .contact, .quicklinks, .support {
-  width: 25%; /* Default to full width */
-  padding: 30px;
-  
-}
-.support a,.quicklinks a{
-  text-decoration: none;
-  color: #f7f7f7;
-
-}
-@media screen and (min-width: 992px) {
-  social, .contact, .quicklinks, .support {
-      width: 25%; /* Adjust footer section width for larger screens */
-  }
-}
-@media screen and (min-width: 1200px) {
-  footer {
-      position: relative; /* Adjust positioning for larger screens */
-      bottom: auto; /* Reset to normal flow */
-  }
-}
-@media (max-width:515px){
-  .foottext{
+    .hero-dubai {
+      background: linear-gradient(rgba(30,144,255,0.7),rgba(0,198,255,0.7)), url('dubi.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px 40px 20px;
+      border-radius: 0 0 30px 30px;
+      margin-bottom: 30px;
+      animation: fadeIn 1.2s;
+    }
+    .hero-dubai h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px #222;
+    }
+    .hero-dubai p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 6px #222;
+    }
+    .destination {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(30,144,255,0.10);
+      padding: 40px 32px 32px 32px;
+      animation: fadeIn 1.2s;
+    }
+    .destination h1 {
+      color: #1e90ff;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      text-align: center;
+      font-family: cursive;
+    }
+    .destination .tour-info {
+      display: flex;
       flex-wrap: wrap;
-  }
-}
-/* Responsive design */
-@media (max-width: 768px) {
-  .slider-container {
-    width: 90%;
-  }
-  .slider {
-    height: 300px;
-  }
-}
-
-@media (max-width: 320px) {
-  .slider-container {
-    width: 100%;
-  }
-  .slider {
-    height: 200px;
-  }
-}
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .destination .tour-info p {
+      background: #f7fafd;
+      border-radius: 12px;
+      padding: 10px 18px;
+      margin: 0;
+      font-size: 1.05rem;
+      color: #333;
+      min-width: 180px;
+      box-shadow: 0 2px 8px rgba(30,144,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .destination h2 {
+      color: #1e90ff;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .destination ol {
+      margin-left: 24px;
+      margin-bottom: 24px;
+      color: #333;
+      font-size: 1rem;
+    }
+    .destination ol li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .book-now {
+      display: inline-block;
+      margin-top: 24px;
+      background: linear-gradient(90deg,#1e90ff,#00c6ff);
+      color: #fff;
+      padding: 14px 38px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 16px rgba(30,144,255,0.12);
+      transition: background 0.2s, transform 0.2s;
+      font-family: cursive;
+      letter-spacing: 1px;
+    }
+    .book-now:hover {
+      background: linear-gradient(90deg,#00c6ff,#1e90ff);
+      transform: scale(1.07);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 700px) {
+      .hero-dubai {
+        padding: 40px 8px 24px 8px;
+      }
+      .destination {
+        padding: 18px 6px 18px 6px;
+      }
+      .destination .tour-info {
+        gap: 12px;
+      }
+    }

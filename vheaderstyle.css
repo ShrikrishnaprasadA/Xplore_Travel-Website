@@ -1,97 +1,146 @@
-
-
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-  }
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7fafd;
+}
 
-  
-  nav {
-    background-color: #333;
+/* Navigation Bar */
+nav {
+    background: rgba(34, 34, 34, 0.97);
     backdrop-filter: blur(10px);
-    font-weight: bolder;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: -20px;
-    width:100vw;
+    padding: 0 32px;
+    width: 100vw;
+    box-sizing: border-box; /* Add this */
     z-index: 1000;
-    position: absolute;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    text-decoration: underline;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 16px rgba(30,144,255,0.08);
+    transition: background 0.3s;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
     text-transform: uppercase;
-    padding-left:20px;
-  }
-  
-  ul {
+    padding: 16px 0;
+    color: #1e90ff;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 8px #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.logo:hover {
+    color: #00c6ff;
+}
+
+/* Navigation Links */
+ul {
     display: flex;
     list-style: none;
     padding: 0;
-    margin-right: 20px;
-  }
-  
-  ul li {
-    margin-right: 20px;
-  }
-  
-  ul li a {
+    margin: 0; /* Change from margin-right: 20px; to margin: 0; */
+    align-items: center;
+}
+
+ul li {
+    margin-right: 28px;
+    position: relative;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
+ul li a {
     color: white;
     text-decoration: none;
-  }
-  
-  ul li a:hover {
-    text-decoration: white double underline;
-    
-  }
-  
-  .checkbtn {
-    font-size: 30px;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    transition: color 0.2s;
+    position: relative;
+}
+
+ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg,#1e90ff,#00c6ff);
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    border-radius: 2px;
+}
+
+ul li a:hover,
+ul li a.active {
+    color: #1e90ff;
+}
+
+ul li a:hover::after,
+ul li a.active::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.checkbtn {
+    font-size: 32px;
     color: white;
     cursor: pointer;
     display: none;
-  }
-  
-  #menu {
+    margin-left: 16px;
+    transition: color 0.2s;
+}
+.checkbtn:hover {
+    color: #1e90ff;
+}
+
+#menu {
     display: none;
-  }
-  
-  @media (max-width: 768px) {
-    .checkbtn {
-      display: block;
-      order: 1;
-      margin-right: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 900px) {
+    nav {
+        padding: 0 12px;
     }
-  
+    .logo {
+        font-size: 1.5rem;
+        padding: 12px 0;
+    }
     ul {
-      position: absolute;
-      top: 18px;
-      right: 100%;
-      background-color: #333;
-      font-weight: bolder;
-      width: 50%;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background: rgba(34,34,34,0.98);
+        width: 90vw; /* Increase from 70vw if needed */
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s cubic-bezier(.77,0,.18,1);
+        box-shadow: -2px 0 16px rgba(30,144,255,0.08);
+        z-index: 999;
     }
-  
     ul li {
-      margin: 20px 0;
+        margin: 24px 0;
     }
-  
     ul li a {
-      font-size: 20px;
+        font-size: 1.3rem;
     }
-  
+    .checkbtn {
+        display: block;
+        order: 1;
+        margin-right: 8px;
+    }
     #menu:checked ~ ul {
-      right: 0;
+        right: 0;
     }
-    
-  }
+}

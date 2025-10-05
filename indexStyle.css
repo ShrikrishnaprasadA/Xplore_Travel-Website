@@ -1,0 +1,156 @@
+    /* Hero Section Styles */
+    .home {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+        color: #fff;
+        text-align: center;
+        padding: 120px 20px 80px 20px;
+        border-radius: 0 0 30px 30px;
+        animation: fadeIn 1.2s;
+    }
+
+    /* Add this to your CSS */
+    /* Make body a flex container */
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Make main take all available space */
+    main {
+        flex: 1;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .home h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 8px #222;
+    }
+
+    .home h3 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        font-weight: 400;
+        text-shadow: 1px 1px 6px #222;
+    }
+
+    #explorebtn {
+        background: linear-gradient(90deg, #1e90ff, #00c6ff);
+        border: none;
+        padding: 16px 38px;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(30, 144, 255, 0.2);
+        transition: background 0.3s, transform 0.2s;
+        margin-top: 10px;
+    }
+
+    #explorebtn:hover {
+        background: linear-gradient(90deg, #00c6ff, #1e90ff);
+        transform: scale(1.07);
+    }
+
+    #explorebtn a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    /* Navigation Animation */
+    nav ul li {
+        transition: transform 0.2s;
+    }
+
+    nav ul li:hover {
+        transform: scale(1.1);
+    }
+
+    nav .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #1e90ff;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 8px #fff;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    nav .logo:hover {
+        color: #00c6ff;
+    }
+
+    /* Footer Enhancements */
+    .foottext {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background: linear-gradient(90deg, #e3f2fd, #fff);
+        padding: 40px 10px 20px 10px;
+        border-radius: 30px 30px 0 0;
+        box-shadow: 0 -2px 16px rgba(30, 144, 255, 0.08);
+        animation: fadeIn 1.2s;
+    }
+
+    .foottext>div {
+        min-width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .foottext h3 {
+        color: #1e90ff;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .foottext a {
+        color: #222;
+        text-decoration: none;
+        transition: color 0.2s, transform 0.2s;
+        font-size: 1rem;
+    }
+
+    .foottext a:hover {
+        color: #1e90ff;
+        transform: scale(1.08);
+        text-decoration: underline;
+    }
+
+    .social i:hover {
+        filter: brightness(1.3);
+        transform: scale(1.2);
+        transition: filter 0.2s, transform 0.2s;
+    }
+
+    .contact span {
+        font-size: 1rem;
+        color: #333;
+    }
+
+    @media (max-width: 900px) {
+        .foottext {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .home {
+            padding: 80px 10px 50px 10px;
+        }
+    }
